@@ -38,7 +38,9 @@ app.post("/sign-up", async (req, res) => {
     res.json(userDoc);
   } catch (e) {
     console.error(e);
-    res.status(400).json({ error: "Failed to create user" });
+    res
+      .status(400)
+      .json({ error: "User created successfully. Login to Create" });
   }
 });
 
